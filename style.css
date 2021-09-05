@@ -30,6 +30,11 @@ body {
     appearance: none;
 }
 
+.container{
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
 .seat{
     background-color: #444451;
     height: 12px;
@@ -60,7 +65,31 @@ body {
     transform: scale(1.2);
 }
 
+.showcase{
+    background-color: rgba(0, 0,0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
 
+.showcase li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small{
+    margin-left: 0 10px;
+}
+
+.showcase .seat:not(.occupied):hover{
+    cursor: default;
+    transform: scale(1);
+}
 
 .row{
     display: flex;
@@ -73,4 +102,12 @@ body {
     margin: 15px 0;
     transform: rotateX(-55deg);
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text{
+    margin: 5px 0;
+}
+
+p.text span{
+    color: #6feaf6;
 }
